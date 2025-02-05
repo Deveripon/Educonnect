@@ -19,7 +19,7 @@ const userSchema = new Schema(
             type: String,
         },
         phone: {
-            required: [true, "Phone number is required"],
+            required: false,
             type: String,
         },
         role: {

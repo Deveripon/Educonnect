@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import { SectionTitle } from "@/components/section-title";
 import { buttonVariants } from "@/components/ui/button";
 import { getAllCategories } from "@/dbQueries/categoryQueries";
@@ -97,7 +98,7 @@ const courses = [
 const HomePage = async () => {
     const categories = await getAllCategories();
     const courses = await getAllCourses();
-    console.log(courses);
+    const session = await auth();
 
     return (
         <>
@@ -131,7 +132,7 @@ const HomePage = async () => {
                             Explore Now
                         </Link>
                         <Link
-                            href=''
+                            href='/register/instructor'
                             className={cn(
                                 buttonVariants({
                                     variant: "outline",

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             <body className={cn(inter.variable, poppins.variable)}>
                 {children}
 
-                <Toaster richColors position='top-center' />
+                <Toaster richColors position='bottom-right' />
             </body>
         </html>
     );
