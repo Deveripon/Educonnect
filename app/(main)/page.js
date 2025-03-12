@@ -99,10 +99,7 @@ const HomePage = async () => {
     const categories = await getAllCategories();
     const courses = await getAllCourses();
     const session = await auth();
-<<<<<<< HEAD
     console.log(`session`, session);
-=======
->>>>>>> 29db7a84d1eb575da2aabcfe336b14f92b310b88
 
     return (
         <>
